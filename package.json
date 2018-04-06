@@ -1,0 +1,33 @@
+{
+  "name": "jest-path",
+  "version": "1.1.0",
+  "main": "src/index.js",
+  "bin": {
+    "jest-path": "src/index.js",
+    "run-jest": "src/index.js"
+  },
+  "author": " <mail@soenkekluth.com> (https://soenkekluth.com/)",
+  "license": "MIT",
+  "scripts": {
+    "update": "yarn upgrade-interactive --latest && rm yarn.lock && yarn",
+    "cleanup": "rm yarn.lock; rm -rf node_modules; yarn",
+    "format": "prettier --write '**/*.{js,json,css}' '**/README.md'",
+    "test": "jest --coverage --verbose"
+  },
+  "engines": {
+    "node": ">=9.2.0"
+  },
+  "keywords": ["vscode", "jest", "path", "pathToJest", "exec", "run", "cli", "local", "global", "proxy", "local first"],
+  "description": "jest-path either executes a local or the global installation of jest",
+  "dependencies": {
+    "command-exists": "^1.2.2",
+    "pify": "^3.0.0",
+    "shelljs": "^0.8.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-sk-node": "^1.1.2",
+    "jest": "^22.4.3",
+    "prettier": "^1.11.1"
+  }
+}
